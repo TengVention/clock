@@ -1,0 +1,8 @@
+<button wx:if="{{loginState==false}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary">登录</button>
+<view wx:if="{{loginState==true}}">
+  <image src="{{userInfo.avatarUrl}}"></image>
+  <view>用户名：{{userInfo.nickName}}</view>
+</view>
+
+
+<image class="headerUrl" src="{{!userInfo.avatarUrl?'https://images.nowcoder.com/head/827m.png':userInfo.avatarUrl}}"></image>
